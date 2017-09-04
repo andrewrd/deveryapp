@@ -1,0 +1,13 @@
+html {
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	  background-image: linear-gradient(20deg, #ffffff, #f4f6fb);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+}
