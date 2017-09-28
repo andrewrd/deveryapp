@@ -24,7 +24,12 @@
   color: #1b2979;
 }
 
-.authbox input {
+.authbox p {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+input[type=text] {
     width: 303px;
   height: 50px;
   border-radius: 6px;
@@ -37,11 +42,18 @@
   padding-right: 5px;
   text-align: center;
 }
+
 .authbox p {
     font-size: 24px;
   font-weight: 500;
   line-height: 1.42;
   text-align: center;
+}
+
+.authbox h5 {
+  padding:0;
+  margin:0;
+  opacity: 0.7;
 }
 
 .button {
@@ -57,6 +69,31 @@
   background-color: #00d8aa;
   box-shadow: 0 8px 13px 0 rgba(0, 216, 170, 0.23);
   cursor: pointer;
+}
+
+form {
+  padding-top: 0;
+}
+input[type=submit] {
+  margin-top: 20px;
+  display: flex;
+  border:none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 315px !important;
+  height: 50px;
+  color:#ffffff;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 4px;
+  background-color: #00d8aa;
+  box-shadow: 0 8px 13px 0 rgba(0, 216, 170, 0.23);
+  cursor: pointer;
+      font-size: 17px;
+}
+input[type=submit]:hover {
+  opacity: 0.4;
 }
 
 .button:hover {
@@ -132,4 +169,16 @@
 
 .inliner img {
   margin-right:10px;
+}
+
+.warning {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  background-color: black;
+  opacity:0.3;
+  position: absolute;
+  bottom:0;
+  color:#ffffff;
 }

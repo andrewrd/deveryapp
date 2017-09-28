@@ -7,53 +7,51 @@ import Loader from './AuthBox/Loader'
 
 import './css/App.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-
+import { reference, database } from './config/config';
 
 class App extends Component {
   constructor(){
     super();
+    this.checkId = this.checkId.bind(this);
+    this.clearResults = this.clearResults.bind(this);
+    this.state = {
+      loadResults: { auth: 'Unknown', origin: 'Unknown'},
+      input: '',
+      result: '',
+    }
+  }
+  
+  //parse ref check that queries firebase.
+  checkId(input){
+    this.setState({ input: input });
+    database.ref(input).once('value', snapshot => { this.setState({ loadResults: snapshot.val() }); });
   }
 
+  clearResults(){
+    this.setState({ loadResults: null } );
+    this.setState({ input: ''})
+  }
+
+  componentWillMount() {
+    let data = database;
+  }
   render() {
     return (
        <Router>
+       <div>
         <div className="App">
 
           <img className="logo" src={logo}/>
 
-          <Route exact path="/" component={AuthBox}/>
-          <Route path="/auth" component={Result}/>
-          <Route path="/topics" component={AuthBox}/>
-
+          <Route exact path="/" render={(props) => ( <AuthBox {...props} checkId={this.checkId} /> )}/>
+          <Route exact path="/auth" render={(props) => ( <Result {...props} loadResults={this.state.loadResults} input={this.state.input} result={this.state.result} clearResults={this.clearResults}/> )}/>
 
         </div>
+
+          </div>
        </Router>
     );
   }
 }
 
 export default App;
-
-/* Rewrite this code
-    return this.state.loading === true ? ( 
-        <div className="App">
-
-          <img className="logo" src={logo}/>
-          <Loader loadTrigger={this.props.loadTrigger} />
-
-        </div>
-      ) : (
-       <Router>
-        <div className="App">
-
-          <img className="logo" src={logo}/>
-
-          <Route exact path="/" component={AuthBox}/>
-          <Route path="/auth" component={Result}/>
-          <Route path="/topics" component={AuthBox}/>
-
-
-        </div>
-       </Router>
-    );
- */ 
