@@ -27,6 +27,7 @@ class App extends Component {
     database.ref(input).once('value', snapshot => { this.setState({ loadResults: snapshot.val() }); });
   }
 
+  //clear the previous query
   clearResults(){
     this.setState({ loadResults: null } );
     this.setState({ input: ''})

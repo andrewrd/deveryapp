@@ -2,7 +2,6 @@
 
 .App {
   font-family: 'Poppins', sans-serif;
-
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +9,7 @@
   text-align: center;
 }
 .logo {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 .loader {
   padding-top: 20%;
@@ -30,7 +29,7 @@
 }
 
 input[type=text] {
-    width: 303px;
+  width: 303px;
   height: 50px;
   border-radius: 6px;
   background-color: #ffffff;
@@ -44,7 +43,7 @@ input[type=text] {
 }
 
 .authbox p {
-    font-size: 24px;
+  font-size: 24px;
   font-weight: 500;
   line-height: 1.42;
   text-align: center;
