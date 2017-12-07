@@ -13,7 +13,7 @@ class App extends Component {
   constructor(){
     super();
     this.checkId = this.checkId.bind(this);
-    this.clearResults = this.clearResults.bind(this);
+    this.clearResults = this.clearResults.bind(this); 
     this.state = {
       loadResults: { auth: 'Unknown', origin: 'Unknown'},
       input: '',
