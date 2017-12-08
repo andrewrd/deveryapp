@@ -2,7 +2,7 @@
   "name": "deveryapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://devery.io/app",
+  "homepage": "https://devery.io/poc/",
   "dependencies": {
     "firebase": "^4.3.1",
     "react": "^15.6.1",

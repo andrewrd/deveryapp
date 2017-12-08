@@ -40,10 +40,10 @@ export default class AuthBox extends Component {
           <br/>
               <input type="text" value={this.state.value} onChange={this.handleChange} />
               <br/>
-               <Link style={{ textDecoration: 'none' }} to="/auth">
+               <Link style={{ textDecoration: 'none' }} to="/poc/auth">
                   <div onClick={this.handleSubmit} className="button"><a href="">Verify</a></div>               
               </Link>
-          <div className="tracker_text">Enter 0xc72DEa9c19D6a056B57eaA0B70Bc5e8d2c7FF148 to demo the product check. </div>
+          <div className="tracker_text">Enter 0xc72DEa9c19D6a056B57eaA0B70Bc5e8d2c7FF148 to demo the product check. This demo serves as a proof of concept is not connected to the blockchain.</div>
 
         </div>
     );

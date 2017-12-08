@@ -44,8 +44,8 @@ class App extends Component {
 
           <img className="logo" src={logo}/>
 
-          <Route exact path="/" render={(props) => ( <AuthBox {...props} checkId={this.checkId} /> )}/>
-          <Route exact path="/auth" render={(props) => ( <Result {...props} loadResults={this.state.loadResults} input={this.state.input} result={this.state.result} clearResults={this.clearResults}/> )}/>
+          <Route exact path="/poc/" render={(props) => ( <AuthBox {...props} checkId={this.checkId} /> )}/>
+          <Route exact path="/poc/auth" render={(props) => ( <Result {...props} loadResults={this.state.loadResults} input={this.state.input} result={this.state.result} clearResults={this.clearResults}/> )}/>
 
         </div>
 

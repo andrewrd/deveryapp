@@ -47,7 +47,7 @@ export default class Result extends Component {
                 <div className="tracker_text"> No Tracker Information </div>
               </div>
           </div>
-          <Link style={{ textDecoration: 'none' }} to="/"><div onClick={this.props.clearResults}className="button"><a href="">Verify Again</a></div></Link>
+          <Link style={{ textDecoration: 'none' }} to="/poc"><div onClick={this.props.clearResults}className="button"><a href="">Verify Again</a></div></Link>
         </div>
     );
   }
